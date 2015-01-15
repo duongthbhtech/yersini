@@ -16,33 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVQ-RC-UFs">
-                                <rect key="frame" x="21" y="499" width="24" height="24"/>
-                                <state key="normal" image="fleche_gauche.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Page" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRl-FP-2uu">
-                                <rect key="frame" x="140" y="477" width="40" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Xew-fE-SBt">
-                                <rect key="frame" x="91" y="514" width="150" height="2"/>
-                            </progressView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WaW-4W-cjl">
-                                <rect key="frame" x="266" y="500" width="24" height="24"/>
-                                <state key="normal" image="fleche_droite.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VpC-cT-Rfi">
-                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UoQ-W9-7xd">
-                                <rect key="frame" x="-7" y="123" width="320" height="321"/>
+                                <rect key="frame" x="-7" y="108" width="320" height="416"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UgK-Qh-uMi">
@@ -82,6 +57,10 @@
                                     <outlet property="delegate" destination="Qfg-64-w2W" id="DfH-02-gFf"/>
                                 </connections>
                             </collectionView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VpC-cT-Rfi">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -101,9 +80,28 @@
             <point key="canvasLocation" x="802" y="232"/>
         </scene>
         <!--Chapter View Controller-->
+        <scene sceneID="Smn-Yt-iU2">
+            <objects>
+                <tableViewController id="cfT-ra-XAz" customClass="ChapterViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="g0l-aL-gu2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="cfT-ra-XAz" id="tCC-ft-QXh"/>
+                            <outlet property="delegate" destination="cfT-ra-XAz" id="TnQ-29-WUC"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OFe-SF-TsD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="-433"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="6He-gR-7dW">
             <objects>
-                <viewController storyboardIdentifier="ChapterViewController" id="NyJ-kx-qYC" customClass="ChapterViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChapterViewController" id="NyJ-kx-qYC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DUp-AE-pmz"/>
                         <viewControllerLayoutGuide type="bottom" id="Ovl-Kv-b79"/>
@@ -121,14 +119,6 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="UDR-Q3-948">
-                                <rect key="frame" x="0.0" y="195" width="320" height="373"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="NyJ-kx-qYC" id="C54-Wo-u6E"/>
-                                    <outlet property="delegate" destination="NyJ-kx-qYC" id="Xvc-Zi-1l7"/>
-                                </connections>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -138,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZrY-yG-U7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1176" y="-382"/>
+            <point key="canvasLocation" x="989" y="-433"/>
         </scene>
         <!--View All Manga-->
         <scene sceneID="aDE-oC-R5E">
@@ -158,8 +148,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="fleche_droite.png" width="24" height="24"/>
-        <image name="fleche_gauche.png" width="24" height="24"/>
         <image name="icone_chap.png" width="79" height="123"/>
     </resources>
 </document>

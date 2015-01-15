@@ -79,15 +79,16 @@
     return 1;
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-        return allMangasArray.count;
+    return allMangasArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     static NSString *CellIdentifier = @"Cell";
     AllMangasCollectionViewCell *cell = (AllMangasCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-
+    
         cell.titleLabel.text = [[allMangasArray objectAtIndex:indexPath.row] valueForKeyPath:@"t"];
+
 //    NSData* imageData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:
 //                                                               
 //                                                               [[allMangasArray objectAtIndex:indexPath.row]objectForKey:@"im"]]];
@@ -110,8 +111,8 @@
     [self.navigationController pushViewController:controller animated:YES];
 }
 
-#pragma mark - SEARCH DISPLAY delegate
-
+//#pragma mark - SEARCH DISPLAY delegate
+//
 //-(BOOL)searchDisplayController:(UISearchDisplayController *)controller
 //shouldReloadTableForSearchString:(NSString *)searchString
 //{

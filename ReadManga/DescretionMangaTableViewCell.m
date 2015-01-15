@@ -1,14 +1,14 @@
 //
-//  ViewDetailsMangaTableViewCell.m
+//  DescretionMangaTableViewCell.m
 //  ReadManga
 //
 //  Created by DuongMac on 1/15/15.
 //  Copyright (c) 2015 godduong. All rights reserved.
 //
 
-#import "ViewDetailsMangaTableViewCell.h"
+#import "DescretionMangaTableViewCell.h"
 
-@implementation ViewDetailsMangaTableViewCell
+@implementation DescretionMangaTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code
@@ -20,9 +20,4 @@
     // Configure the view for the selected state
 }
 
-- (IBAction)btnFavorite:(id)sender {
-}
-
-- (IBAction)btnRead:(id)sender {
-}
 @end

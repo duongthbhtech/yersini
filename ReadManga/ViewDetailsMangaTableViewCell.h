@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewDetailsMangaTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *authorLabel;
-@property (weak, nonatomic) IBOutlet UILabel *chaptersLabel;
-@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
-@property (weak, nonatomic) IBOutlet UILabel *rankingLabel;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+- (IBAction)btnFavorite:(id)sender;
+- (IBAction)btnRead:(id)sender;
+
 
 @end

@@ -13,8 +13,11 @@
 		646AB0C11A6777B800D3BF66 /* AllMangasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 646AB0C01A6777B800D3BF66 /* AllMangasViewController.m */; };
 		646AB0C41A67789E00D3BF66 /* AllMangasCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 646AB0C31A67789E00D3BF66 /* AllMangasCollectionViewCell.m */; };
 		646AB0D51A67A48900D3BF66 /* ChapterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 646AB0D31A67A48900D3BF66 /* ChapterTableViewCell.m */; };
-		646AB0D61A67A48900D3BF66 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 646AB0D41A67A48900D3BF66 /* TableViewCell.xib */; };
 		646AB0D91A67A4CB00D3BF66 /* ChapterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 646AB0D81A67A4CB00D3BF66 /* ChapterViewController.m */; };
+		646AB0E01A67B2D100D3BF66 /* DescretionMangaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 646AB0DE1A67B2D100D3BF66 /* DescretionMangaTableViewCell.m */; };
+		646AB0E11A67B2D100D3BF66 /* DescretionMangaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 646AB0DF1A67B2D100D3BF66 /* DescretionMangaTableViewCell.xib */; };
+		646AB0E51A67B32600D3BF66 /* InformationMangaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 646AB0E31A67B32600D3BF66 /* InformationMangaTableViewCell.m */; };
+		646AB0E61A67B32600D3BF66 /* InformationMangaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 646AB0E41A67B32600D3BF66 /* InformationMangaTableViewCell.xib */; };
 		64B5C5101A64CC3000D7E9B0 /* fleche_droite.png in Resources */ = {isa = PBXBuildFile; fileRef = 64B5C50D1A64CC3000D7E9B0 /* fleche_droite.png */; };
 		64B5C5111A64CC3000D7E9B0 /* fleche_gauche.png in Resources */ = {isa = PBXBuildFile; fileRef = 64B5C50E1A64CC3000D7E9B0 /* fleche_gauche.png */; };
 		64B5C5121A64CC3000D7E9B0 /* icone_chap.png in Resources */ = {isa = PBXBuildFile; fileRef = 64B5C50F1A64CC3000D7E9B0 /* icone_chap.png */; };
@@ -50,9 +53,14 @@
 		646AB0C31A67789E00D3BF66 /* AllMangasCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllMangasCollectionViewCell.m; sourceTree = "<group>"; };
 		646AB0D21A67A48900D3BF66 /* ChapterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterTableViewCell.h; sourceTree = "<group>"; };
 		646AB0D31A67A48900D3BF66 /* ChapterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChapterTableViewCell.m; sourceTree = "<group>"; };
-		646AB0D41A67A48900D3BF66 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		646AB0D71A67A4CB00D3BF66 /* ChapterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterViewController.h; sourceTree = "<group>"; };
 		646AB0D81A67A4CB00D3BF66 /* ChapterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChapterViewController.m; sourceTree = "<group>"; };
+		646AB0DD1A67B2D100D3BF66 /* DescretionMangaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescretionMangaTableViewCell.h; sourceTree = "<group>"; };
+		646AB0DE1A67B2D100D3BF66 /* DescretionMangaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescretionMangaTableViewCell.m; sourceTree = "<group>"; };
+		646AB0DF1A67B2D100D3BF66 /* DescretionMangaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DescretionMangaTableViewCell.xib; sourceTree = "<group>"; };
+		646AB0E21A67B32600D3BF66 /* InformationMangaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationMangaTableViewCell.h; sourceTree = "<group>"; };
+		646AB0E31A67B32600D3BF66 /* InformationMangaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationMangaTableViewCell.m; sourceTree = "<group>"; };
+		646AB0E41A67B32600D3BF66 /* InformationMangaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationMangaTableViewCell.xib; sourceTree = "<group>"; };
 		64B5C50D1A64CC3000D7E9B0 /* fleche_droite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fleche_droite.png; sourceTree = "<group>"; };
 		64B5C50E1A64CC3000D7E9B0 /* fleche_gauche.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fleche_gauche.png; sourceTree = "<group>"; };
 		64B5C50F1A64CC3000D7E9B0 /* icone_chap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icone_chap.png; sourceTree = "<group>"; };
@@ -103,7 +111,12 @@
 				646AB0BC1A67725C00D3BF66 /* ViewDetailsMangaTableViewCell.xib */,
 				646AB0D21A67A48900D3BF66 /* ChapterTableViewCell.h */,
 				646AB0D31A67A48900D3BF66 /* ChapterTableViewCell.m */,
-				646AB0D41A67A48900D3BF66 /* TableViewCell.xib */,
+				646AB0DD1A67B2D100D3BF66 /* DescretionMangaTableViewCell.h */,
+				646AB0DE1A67B2D100D3BF66 /* DescretionMangaTableViewCell.m */,
+				646AB0DF1A67B2D100D3BF66 /* DescretionMangaTableViewCell.xib */,
+				646AB0E21A67B32600D3BF66 /* InformationMangaTableViewCell.h */,
+				646AB0E31A67B32600D3BF66 /* InformationMangaTableViewCell.m */,
+				646AB0E41A67B32600D3BF66 /* InformationMangaTableViewCell.xib */,
 			);
 			name = ViewCell;
 			sourceTree = "<group>";
@@ -305,12 +318,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				646AB0E61A67B32600D3BF66 /* InformationMangaTableViewCell.xib in Resources */,
+				646AB0E11A67B2D100D3BF66 /* DescretionMangaTableViewCell.xib in Resources */,
 				64EB99A51A5E7DFD006C4A4F /* Main.storyboard in Resources */,
 				64B5C5101A64CC3000D7E9B0 /* fleche_droite.png in Resources */,
 				646AB0BE1A67725C00D3BF66 /* ViewDetailsMangaTableViewCell.xib in Resources */,
 				64EB99AA1A5E7DFE006C4A4F /* LaunchScreen.xib in Resources */,
 				64B5C5111A64CC3000D7E9B0 /* fleche_gauche.png in Resources */,
-				646AB0D61A67A48900D3BF66 /* TableViewCell.xib in Resources */,
 				64B5C5121A64CC3000D7E9B0 /* icone_chap.png in Resources */,
 				64EB99A71A5E7DFD006C4A4F /* Images.xcassets in Resources */,
 			);
@@ -365,6 +379,7 @@
 			files = (
 				646AB0C11A6777B800D3BF66 /* AllMangasViewController.m in Sources */,
 				646AB0BD1A67725C00D3BF66 /* ViewDetailsMangaTableViewCell.m in Sources */,
+				646AB0E01A67B2D100D3BF66 /* DescretionMangaTableViewCell.m in Sources */,
 				64E71BA81A63D67900F9EBA8 /* Manga.m in Sources */,
 				646AB0D91A67A4CB00D3BF66 /* ChapterViewController.m in Sources */,
 				64EB999C1A5E7DFD006C4A4F /* AppDelegate.m in Sources */,
@@ -373,6 +388,7 @@
 				64EB99A21A5E7DFD006C4A4F /* ViewController.m in Sources */,
 				64EB999F1A5E7DFD006C4A4F /* ReadManga.xcdatamodeld in Sources */,
 				646AB0C41A67789E00D3BF66 /* AllMangasCollectionViewCell.m in Sources */,
+				646AB0E51A67B32600D3BF66 /* InformationMangaTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
