@@ -14,7 +14,7 @@
     int currentPage;
 }
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
-@property(strong,nonatomic)NSString* chapitreID;
+@property(strong,nonatomic)NSString* chapterID;
 @property(strong,nonatomic)NSString* numChap;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;

@@ -9,7 +9,7 @@
 #import "ChapViewController.h"
 #import "CustomCollectionViewCell.h"
 #import "ImagesViewController.h"
-#define wsGetAllChapitres @"http://www.mangaeden.com/api/manga/"
+#define wsGetAllChapter @"http://www.mangaeden.com/api/manga/"
 @interface ChapViewController ()
 
 @end
@@ -21,20 +21,20 @@
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addToFavorite)];
     
-    [self wsAllChapitres];
+    [self wsAllChapter];
 
     
     [super viewDidLoad];
 }
 
--(void)wsAllChapitres{
+-(void)wsAllChapter{
     UIActivityIndicatorView *activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     [activityView setFrame:CGRectMake(self.view.frame.size.width/2-activityView.frame.size.width/2, self.view.frame.size.height/2-activityView.frame.size.height/2, activityView.frame.size.width, activityView.frame.size.height)];
     [activityView startAnimating];
     [self.view addSubview:activityView];
     
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
-    NSString *_urlString = [NSString stringWithFormat:@"%@%@",wsGetAllChapitres,_mangaID];
+    NSString *_urlString = [NSString stringWithFormat:@"%@%@",wsGetAllChapter,_mangaID];
     NSURL *_url = [NSURL URLWithString:_urlString];
     
     NSMutableURLRequest *_request = [NSMutableURLRequest requestWithURL:_url];
@@ -62,7 +62,7 @@
                                        
                                        _descTextView.text = [_reponseDic valueForKeyPath:@"description"];
                                        
-                                       chapitreArray = [[NSArray alloc] initWithArray:[_reponseDic valueForKeyPath:@"chapters"]];
+                                       chapterArray = [[NSArray alloc] initWithArray:[_reponseDic valueForKeyPath:@"chapters"]];
                                        
                                        [_collectionView reloadData];
                                    });
@@ -85,14 +85,14 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     
-    return chapitreArray.count;
+    return chapterArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     CustomCollectionViewCell *cell = (CustomCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@",[[chapitreArray objectAtIndex:indexPath.row] objectAtIndex:2]];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@",[[chapterArray objectAtIndex:indexPath.row] objectAtIndex:2]];
     
     return cell;
 }
@@ -100,8 +100,8 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     ImagesViewController *controller= [self.storyboard instantiateViewControllerWithIdentifier:@"ImagesViewController"];
-    controller.chapitreID = [[chapitreArray objectAtIndex:indexPath.row] objectAtIndex:3];
-    controller.numChap = [[chapitreArray objectAtIndex:indexPath.row] objectAtIndex:2];
+    controller.chapitreID = [[chapterArray objectAtIndex:indexPath.row] objectAtIndex:3];
+    controller.numChap = [[chapterArray objectAtIndex:indexPath.row] objectAtIndex:2];
     
     [self.navigationController pushViewController:controller animated:YES];
 }

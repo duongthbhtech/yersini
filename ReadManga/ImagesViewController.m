@@ -14,7 +14,7 @@
 @end
 
 @implementation ImagesViewController
-@synthesize chapitreID;
+@synthesize chapterID;
 @synthesize numChap;
 
 - (void)viewDidLoad {
@@ -37,7 +37,7 @@
     [_activityView startAnimating];
     
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
-    NSString *_urlString = [NSString stringWithFormat:@"%@%@",wsGetAllImages,chapitreID];
+    NSString *_urlString = [NSString stringWithFormat:@"%@%@",wsGetAllImages,chapterID];
     NSURL *_url = [NSURL URLWithString:_urlString];
     
     NSMutableURLRequest *_request = [NSMutableURLRequest requestWithURL:_url];

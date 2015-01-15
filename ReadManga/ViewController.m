@@ -39,8 +39,8 @@
     switch (indexPath.row) {
         case 0:
             cell.imageView.image=[UIImage imageNamed:@""];
-            cell.textLabel.text=@"FAVORIS";
-            cell.detailTextLabel.text=@"Manga Favoris";
+            cell.textLabel.text=@"FAVORITE";
+            cell.detailTextLabel.text=@"Manga Favorite";
             break;
         case 1:
             cell.imageView.image=[UIImage imageNamed:@""];

@@ -14,7 +14,7 @@
 
 
 @interface ChapViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate,UIAlertViewDelegate>{
-    NSArray *chapitreArray;
+    NSArray *chapterArray;
 }
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -23,6 +23,6 @@
 @property(strong,nonatomic)NSString *mangaID;
 @property(strong,nonatomic)NSString *mangaName;
 
--(void)wsAllChapitres;
+-(void)wsAllChapter;
 -(void)addToFavorite;
 @end
