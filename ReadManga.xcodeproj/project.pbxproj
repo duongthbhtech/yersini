@@ -1,0 +1,581 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2915684E96E2B0D6FADC43CF /* libPods-ReadManga.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E037A51D8E0AC313326108CC /* libPods-ReadManga.a */; };
+		64B5C50B1A64B81000D7E9B0 /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B5C50A1A64B81000D7E9B0 /* CustomCollectionViewCell.m */; };
+		64B5C5101A64CC3000D7E9B0 /* fleche_droite.png in Resources */ = {isa = PBXBuildFile; fileRef = 64B5C50D1A64CC3000D7E9B0 /* fleche_droite.png */; };
+		64B5C5111A64CC3000D7E9B0 /* fleche_gauche.png in Resources */ = {isa = PBXBuildFile; fileRef = 64B5C50E1A64CC3000D7E9B0 /* fleche_gauche.png */; };
+		64B5C5121A64CC3000D7E9B0 /* icone_chap.png in Resources */ = {isa = PBXBuildFile; fileRef = 64B5C50F1A64CC3000D7E9B0 /* icone_chap.png */; };
+		64E71BA81A63D67900F9EBA8 /* Manga.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E71BA71A63D67900F9EBA8 /* Manga.m */; };
+		64E71BAE1A63D6C400F9EBA8 /* MangasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E71BAD1A63D6C400F9EBA8 /* MangasViewController.m */; };
+		64E71BB11A63D70000F9EBA8 /* ChapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E71BB01A63D70000F9EBA8 /* ChapViewController.m */; };
+		64E71BB41A63D72500F9EBA8 /* MangaFavorisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E71BB31A63D72500F9EBA8 /* MangaFavorisViewController.m */; };
+		64E71BB71A63D73900F9EBA8 /* ImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E71BB61A63D73900F9EBA8 /* ImagesViewController.m */; };
+		64EB99991A5E7DFD006C4A4F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 64EB99981A5E7DFD006C4A4F /* main.m */; };
+		64EB999C1A5E7DFD006C4A4F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 64EB999B1A5E7DFD006C4A4F /* AppDelegate.m */; };
+		64EB999F1A5E7DFD006C4A4F /* ReadManga.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 64EB999D1A5E7DFD006C4A4F /* ReadManga.xcdatamodeld */; };
+		64EB99A21A5E7DFD006C4A4F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64EB99A11A5E7DFD006C4A4F /* ViewController.m */; };
+		64EB99A51A5E7DFD006C4A4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64EB99A31A5E7DFD006C4A4F /* Main.storyboard */; };
+		64EB99A71A5E7DFD006C4A4F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64EB99A61A5E7DFD006C4A4F /* Images.xcassets */; };
+		64EB99AA1A5E7DFE006C4A4F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64EB99A81A5E7DFE006C4A4F /* LaunchScreen.xib */; };
+		64EB99B61A5E7DFE006C4A4F /* ReadMangaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 64EB99B51A5E7DFE006C4A4F /* ReadMangaTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		64EB99B01A5E7DFE006C4A4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 64EB998B1A5E7DFD006C4A4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64EB99921A5E7DFD006C4A4F;
+			remoteInfo = ReadManga;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0EF689946A5901FF8EFDE883 /* Pods-ReadManga.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReadManga.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReadManga/Pods-ReadManga.release.xcconfig"; sourceTree = "<group>"; };
+		64B5C5091A64B81000D7E9B0 /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
+		64B5C50A1A64B81000D7E9B0 /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
+		64B5C50D1A64CC3000D7E9B0 /* fleche_droite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fleche_droite.png; sourceTree = "<group>"; };
+		64B5C50E1A64CC3000D7E9B0 /* fleche_gauche.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fleche_gauche.png; sourceTree = "<group>"; };
+		64B5C50F1A64CC3000D7E9B0 /* icone_chap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icone_chap.png; sourceTree = "<group>"; };
+		64E71BA61A63D67900F9EBA8 /* Manga.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Manga.h; sourceTree = "<group>"; };
+		64E71BA71A63D67900F9EBA8 /* Manga.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Manga.m; sourceTree = "<group>"; };
+		64E71BAC1A63D6C400F9EBA8 /* MangasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MangasViewController.h; sourceTree = "<group>"; };
+		64E71BAD1A63D6C400F9EBA8 /* MangasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MangasViewController.m; sourceTree = "<group>"; };
+		64E71BAF1A63D70000F9EBA8 /* ChapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapViewController.h; sourceTree = "<group>"; };
+		64E71BB01A63D70000F9EBA8 /* ChapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChapViewController.m; sourceTree = "<group>"; };
+		64E71BB21A63D72500F9EBA8 /* MangaFavorisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MangaFavorisViewController.h; sourceTree = "<group>"; };
+		64E71BB31A63D72500F9EBA8 /* MangaFavorisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MangaFavorisViewController.m; sourceTree = "<group>"; };
+		64E71BB51A63D73900F9EBA8 /* ImagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesViewController.h; sourceTree = "<group>"; };
+		64E71BB61A63D73900F9EBA8 /* ImagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesViewController.m; sourceTree = "<group>"; };
+		64EB99931A5E7DFD006C4A4F /* ReadManga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadManga.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		64EB99971A5E7DFD006C4A4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64EB99981A5E7DFD006C4A4F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		64EB999A1A5E7DFD006C4A4F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		64EB999B1A5E7DFD006C4A4F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		64EB999E1A5E7DFD006C4A4F /* ReadManga.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReadManga.xcdatamodel; sourceTree = "<group>"; };
+		64EB99A01A5E7DFD006C4A4F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		64EB99A11A5E7DFD006C4A4F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		64EB99A41A5E7DFD006C4A4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		64EB99A61A5E7DFD006C4A4F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		64EB99A91A5E7DFE006C4A4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		64EB99AF1A5E7DFE006C4A4F /* ReadMangaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReadMangaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		64EB99B41A5E7DFE006C4A4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64EB99B51A5E7DFE006C4A4F /* ReadMangaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReadMangaTests.m; sourceTree = "<group>"; };
+		65FE1ECCE9F6B95C9B3113AE /* Pods-ReadManga.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReadManga.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReadManga/Pods-ReadManga.debug.xcconfig"; sourceTree = "<group>"; };
+		E037A51D8E0AC313326108CC /* libPods-ReadManga.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReadManga.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		64EB99901A5E7DFD006C4A4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2915684E96E2B0D6FADC43CF /* libPods-ReadManga.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64EB99AC1A5E7DFE006C4A4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		64B5C50C1A64CBF500D7E9B0 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				64B5C50D1A64CC3000D7E9B0 /* fleche_droite.png */,
+				64B5C50E1A64CC3000D7E9B0 /* fleche_gauche.png */,
+				64B5C50F1A64CC3000D7E9B0 /* icone_chap.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		64E71BA41A63BE7F00F9EBA8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				64EB99A01A5E7DFD006C4A4F /* ViewController.h */,
+				64EB99A11A5E7DFD006C4A4F /* ViewController.m */,
+				64E71BAC1A63D6C400F9EBA8 /* MangasViewController.h */,
+				64E71BAD1A63D6C400F9EBA8 /* MangasViewController.m */,
+				64E71BAF1A63D70000F9EBA8 /* ChapViewController.h */,
+				64E71BB01A63D70000F9EBA8 /* ChapViewController.m */,
+				64E71BB21A63D72500F9EBA8 /* MangaFavorisViewController.h */,
+				64E71BB31A63D72500F9EBA8 /* MangaFavorisViewController.m */,
+				64E71BB51A63D73900F9EBA8 /* ImagesViewController.h */,
+				64E71BB61A63D73900F9EBA8 /* ImagesViewController.m */,
+				64B5C5091A64B81000D7E9B0 /* CustomCollectionViewCell.h */,
+				64B5C50A1A64B81000D7E9B0 /* CustomCollectionViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		64E71BA51A63D5C300F9EBA8 /* Manga */ = {
+			isa = PBXGroup;
+			children = (
+				64E71BA61A63D67900F9EBA8 /* Manga.h */,
+				64E71BA71A63D67900F9EBA8 /* Manga.m */,
+			);
+			name = Manga;
+			sourceTree = "<group>";
+		};
+		64EB998A1A5E7DFD006C4A4F = {
+			isa = PBXGroup;
+			children = (
+				64EB99951A5E7DFD006C4A4F /* ReadManga */,
+				64EB99B21A5E7DFE006C4A4F /* ReadMangaTests */,
+				64EB99941A5E7DFD006C4A4F /* Products */,
+				E3EE23BF2B77F1F3565E43C3 /* Pods */,
+				F0FC7B5FAAD8DB6A0D7E3502 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		64EB99941A5E7DFD006C4A4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				64EB99931A5E7DFD006C4A4F /* ReadManga.app */,
+				64EB99AF1A5E7DFE006C4A4F /* ReadMangaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		64EB99951A5E7DFD006C4A4F /* ReadManga */ = {
+			isa = PBXGroup;
+			children = (
+				64B5C50C1A64CBF500D7E9B0 /* Images */,
+				64E71BA51A63D5C300F9EBA8 /* Manga */,
+				64E71BA41A63BE7F00F9EBA8 /* Views */,
+				64EB999A1A5E7DFD006C4A4F /* AppDelegate.h */,
+				64EB999B1A5E7DFD006C4A4F /* AppDelegate.m */,
+				64EB99A31A5E7DFD006C4A4F /* Main.storyboard */,
+				64EB99A61A5E7DFD006C4A4F /* Images.xcassets */,
+				64EB99A81A5E7DFE006C4A4F /* LaunchScreen.xib */,
+				64EB999D1A5E7DFD006C4A4F /* ReadManga.xcdatamodeld */,
+				64EB99961A5E7DFD006C4A4F /* Supporting Files */,
+			);
+			path = ReadManga;
+			sourceTree = "<group>";
+		};
+		64EB99961A5E7DFD006C4A4F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				64EB99971A5E7DFD006C4A4F /* Info.plist */,
+				64EB99981A5E7DFD006C4A4F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		64EB99B21A5E7DFE006C4A4F /* ReadMangaTests */ = {
+			isa = PBXGroup;
+			children = (
+				64EB99B51A5E7DFE006C4A4F /* ReadMangaTests.m */,
+				64EB99B31A5E7DFE006C4A4F /* Supporting Files */,
+			);
+			path = ReadMangaTests;
+			sourceTree = "<group>";
+		};
+		64EB99B31A5E7DFE006C4A4F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				64EB99B41A5E7DFE006C4A4F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E3EE23BF2B77F1F3565E43C3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				65FE1ECCE9F6B95C9B3113AE /* Pods-ReadManga.debug.xcconfig */,
+				0EF689946A5901FF8EFDE883 /* Pods-ReadManga.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F0FC7B5FAAD8DB6A0D7E3502 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E037A51D8E0AC313326108CC /* libPods-ReadManga.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		64EB99921A5E7DFD006C4A4F /* ReadManga */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64EB99B91A5E7DFE006C4A4F /* Build configuration list for PBXNativeTarget "ReadManga" */;
+			buildPhases = (
+				A3979485DF282BBD9FC3E6F7 /* Check Pods Manifest.lock */,
+				64EB998F1A5E7DFD006C4A4F /* Sources */,
+				64EB99901A5E7DFD006C4A4F /* Frameworks */,
+				64EB99911A5E7DFD006C4A4F /* Resources */,
+				F693C9EE62958F78C8BFF36C /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReadManga;
+			productName = ReadManga;
+			productReference = 64EB99931A5E7DFD006C4A4F /* ReadManga.app */;
+			productType = "com.apple.product-type.application";
+		};
+		64EB99AE1A5E7DFE006C4A4F /* ReadMangaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64EB99BC1A5E7DFE006C4A4F /* Build configuration list for PBXNativeTarget "ReadMangaTests" */;
+			buildPhases = (
+				64EB99AB1A5E7DFE006C4A4F /* Sources */,
+				64EB99AC1A5E7DFE006C4A4F /* Frameworks */,
+				64EB99AD1A5E7DFE006C4A4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				64EB99B11A5E7DFE006C4A4F /* PBXTargetDependency */,
+			);
+			name = ReadMangaTests;
+			productName = ReadMangaTests;
+			productReference = 64EB99AF1A5E7DFE006C4A4F /* ReadMangaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		64EB998B1A5E7DFD006C4A4F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = godduong;
+				TargetAttributes = {
+					64EB99921A5E7DFD006C4A4F = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					64EB99AE1A5E7DFE006C4A4F = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 64EB99921A5E7DFD006C4A4F;
+					};
+				};
+			};
+			buildConfigurationList = 64EB998E1A5E7DFD006C4A4F /* Build configuration list for PBXProject "ReadManga" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 64EB998A1A5E7DFD006C4A4F;
+			productRefGroup = 64EB99941A5E7DFD006C4A4F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				64EB99921A5E7DFD006C4A4F /* ReadManga */,
+				64EB99AE1A5E7DFE006C4A4F /* ReadMangaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		64EB99911A5E7DFD006C4A4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64EB99A51A5E7DFD006C4A4F /* Main.storyboard in Resources */,
+				64B5C5101A64CC3000D7E9B0 /* fleche_droite.png in Resources */,
+				64EB99AA1A5E7DFE006C4A4F /* LaunchScreen.xib in Resources */,
+				64B5C5111A64CC3000D7E9B0 /* fleche_gauche.png in Resources */,
+				64B5C5121A64CC3000D7E9B0 /* icone_chap.png in Resources */,
+				64EB99A71A5E7DFD006C4A4F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64EB99AD1A5E7DFE006C4A4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A3979485DF282BBD9FC3E6F7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F693C9EE62958F78C8BFF36C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReadManga/Pods-ReadManga-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		64EB998F1A5E7DFD006C4A4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64E71BB11A63D70000F9EBA8 /* ChapViewController.m in Sources */,
+				64E71BB71A63D73900F9EBA8 /* ImagesViewController.m in Sources */,
+				64E71BA81A63D67900F9EBA8 /* Manga.m in Sources */,
+				64EB999C1A5E7DFD006C4A4F /* AppDelegate.m in Sources */,
+				64EB99991A5E7DFD006C4A4F /* main.m in Sources */,
+				64E71BB41A63D72500F9EBA8 /* MangaFavorisViewController.m in Sources */,
+				64E71BAE1A63D6C400F9EBA8 /* MangasViewController.m in Sources */,
+				64EB99A21A5E7DFD006C4A4F /* ViewController.m in Sources */,
+				64EB999F1A5E7DFD006C4A4F /* ReadManga.xcdatamodeld in Sources */,
+				64B5C50B1A64B81000D7E9B0 /* CustomCollectionViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64EB99AB1A5E7DFE006C4A4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64EB99B61A5E7DFE006C4A4F /* ReadMangaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		64EB99B11A5E7DFE006C4A4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64EB99921A5E7DFD006C4A4F /* ReadManga */;
+			targetProxy = 64EB99B01A5E7DFE006C4A4F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		64EB99A31A5E7DFD006C4A4F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64EB99A41A5E7DFD006C4A4F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		64EB99A81A5E7DFE006C4A4F /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64EB99A91A5E7DFE006C4A4F /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		64EB99B71A5E7DFE006C4A4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		64EB99B81A5E7DFE006C4A4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		64EB99BA1A5E7DFE006C4A4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65FE1ECCE9F6B95C9B3113AE /* Pods-ReadManga.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ReadManga/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		64EB99BB1A5E7DFE006C4A4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EF689946A5901FF8EFDE883 /* Pods-ReadManga.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ReadManga/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		64EB99BD1A5E7DFE006C4A4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ReadMangaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReadManga.app/ReadManga";
+			};
+			name = Debug;
+		};
+		64EB99BE1A5E7DFE006C4A4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ReadMangaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReadManga.app/ReadManga";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		64EB998E1A5E7DFD006C4A4F /* Build configuration list for PBXProject "ReadManga" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64EB99B71A5E7DFE006C4A4F /* Debug */,
+				64EB99B81A5E7DFE006C4A4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64EB99B91A5E7DFE006C4A4F /* Build configuration list for PBXNativeTarget "ReadManga" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64EB99BA1A5E7DFE006C4A4F /* Debug */,
+				64EB99BB1A5E7DFE006C4A4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64EB99BC1A5E7DFE006C4A4F /* Build configuration list for PBXNativeTarget "ReadMangaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64EB99BD1A5E7DFE006C4A4F /* Debug */,
+				64EB99BE1A5E7DFE006C4A4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		64EB999D1A5E7DFD006C4A4F /* ReadManga.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				64EB999E1A5E7DFD006C4A4F /* ReadManga.xcdatamodel */,
+			);
+			currentVersion = 64EB999E1A5E7DFD006C4A4F /* ReadManga.xcdatamodel */;
+			path = ReadManga.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 64EB998B1A5E7DFD006C4A4F /* Project object */;
+}
