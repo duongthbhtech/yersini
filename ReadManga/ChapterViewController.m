@@ -1,37 +1,32 @@
 //
-//  ChapitreTableViewController.m
+//  TableViewController.m
 //  ReadManga
 //
-//  Created by DuongMac on 1/12/15.
+//  Created by DuongMac on 1/15/15.
 //  Copyright (c) 2015 godduong. All rights reserved.
 //
 
-#import "ChapViewController.h"
-#import "CustomCollectionViewCell.h"
-#import "ImagesViewController.h"
+#import "ChapterViewController.h"
+#import "ChapterTableViewCell.h"
 #define wsGetAllChapter @"http://www.mangaeden.com/api/manga/"
-@interface ChapViewController ()
+@interface ChapterViewController ()
 
 @end
 
-@implementation ChapViewController
+@implementation ChapterViewController
 
 - (void)viewDidLoad {
     self.title=_mangaName;
-    
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addToFavorite)];
-    
     [self wsAllChapter];
-
-    
     [super viewDidLoad];
+  
 }
 
 -(void)wsAllChapter{
     UIActivityIndicatorView *activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     [activityView setFrame:CGRectMake(self.view.frame.size.width/2-activityView.frame.size.width/2, self.view.frame.size.height/2-activityView.frame.size.height/2, activityView.frame.size.width, activityView.frame.size.height)];
     [activityView startAnimating];
-    [self.view addSubview:activityView];
+    [self.tableView addSubview:activityView];
     
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     NSString *_urlString = [NSString stringWithFormat:@"%@%@",wsGetAllChapter,_mangaID];
@@ -60,11 +55,9 @@
                                        [activityView stopAnimating];
                                        [activityView removeFromSuperview];
                                        
-                                       _descTextView.text = [_reponseDic valueForKeyPath:@"description"];
-                                       
                                        chapterArray = [[NSArray alloc] initWithArray:[_reponseDic valueForKeyPath:@"chapters"]];
                                        
-                                       [_collectionView reloadData];
+                                       [self.tableView reloadData];
                                    });
                                }
                                
@@ -83,49 +76,20 @@
     return 1;
 }
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    
-    return chapterArray.count;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+   return chapterArray.count;
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     
-    CustomCollectionViewCell *cell = (CustomCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"Cell";
+    ChapterTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@",[[chapterArray objectAtIndex:indexPath.row] objectAtIndex:2]];
+    cell.chapterLabel.text = [NSString stringWithFormat:@"%@",[[chapterArray objectAtIndex:indexPath.row] objectAtIndex:2]];
     
     return cell;
-}
-#pragma mark UICollectionView Delegate
 
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    ImagesViewController *controller= [self.storyboard instantiateViewControllerWithIdentifier:@"ImagesViewController"];
-    controller.chapitreID = [[chapterArray objectAtIndex:indexPath.row] objectAtIndex:3];
-    controller.numChap = [[chapterArray objectAtIndex:indexPath.row] objectAtIndex:2];
-    
-    [self.navigationController pushViewController:controller animated:YES];
-}
-
--(void)addToFavorite{
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Information" message:@"manga farvouris?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
-    
-    [alert show];
-    
-}
-
-#pragma mark UIAlertView Delegate
--(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    if (buttonIndex==1) {
-        NSManagedObjectContext* context= ((AppDelegate*) [[UIApplication sharedApplication]delegate]).managedObjectContext;
-        NSEntityDescription * entity= [NSEntityDescription
-                                       entityForName:@"Manga" inManagedObjectContext:context];
-        Manga *manga = [[Manga alloc]initWithEntity:entity insertIntoManagedObjectContext:context];
-        manga.mangaID = _mangaID;
-        manga.mangeName = _mangaName;
-        
-        [context insertObject:manga];
-        [context save:nil];
-    }
 }
 
 @end

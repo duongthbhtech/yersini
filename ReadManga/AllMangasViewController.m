@@ -1,32 +1,31 @@
 //
-//  MangasViewController.m
+//  AllMangasViewController.m
 //  ReadManga
 //
-//  Created by DuongMac on 1/12/15.
+//  Created by DuongMac on 1/15/15.
 //  Copyright (c) 2015 godduong. All rights reserved.
 //
 
-#import "MangasViewController.h"
+#import "AllMangasViewController.h"
+#import "AllMangasCollectionViewCell.h"
+#import "ChapterViewController.h"
 
-@interface MangasViewController ()
+@interface AllMangasViewController ()
 
 @end
 
-@implementation MangasViewController
+@implementation AllMangasViewController
 
 - (void)viewDidLoad {
-    
-    [self.searchDisplayController.searchResultsTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
-    
     [self wsAllMangas];
-    
     [super viewDidLoad];
 }
+
 -(void)wsAllMangas{
     UIActivityIndicatorView *activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     [activityView setFrame:CGRectMake(self.view.frame.size.width/2-activityView.frame.size.width/2, self.view.frame.size.height/2-activityView.frame.size.height/2, activityView.frame.size.width, activityView.frame.size.height)];
     [activityView startAnimating];
-    [self.tableView addSubview:activityView];
+    [self.view addSubview:activityView];
     
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     NSString *_urlString = @"http://www.mangaeden.com/api/list/0/";
@@ -56,7 +55,7 @@
                                        NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"t" ascending:YES];
                                        allMangasArray=[allMangasArray sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
                                        
-                                       [self.tableView reloadData];
+                                       [_collectionView reloadData];
                                        
                                        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
                                        [activityView stopAnimating];
@@ -67,82 +66,75 @@
                            }];
     
 }
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
     return 1;
 }
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (tableView==self.searchDisplayController.searchResultsTableView) {
-        return searchResults.count;
-    }else{
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
         return allMangasArray.count;
-    }
-    
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
-    
-    if (tableView == self.searchDisplayController.searchResultsTableView) {
-        cell.textLabel.text = [[searchResults objectAtIndex:indexPath.row] valueForKeyPath:@"t"];
-    } else {
-        cell.textLabel.text = [[allMangasArray objectAtIndex:indexPath.row] valueForKeyPath:@"t"];
-    }
+    AllMangasCollectionViewCell *cell = (AllMangasCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+
+        cell.titleLabel.text = [[allMangasArray objectAtIndex:indexPath.row] valueForKeyPath:@"t"];
+//    NSData* imageData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:
+//                                                               
+//                                                               [[allMangasArray objectAtIndex:indexPath.row]objectForKey:@"im"]]];
+//    
+//    UIImage* image = [[UIImage alloc] initWithData:imageData];
+//    
+//    cell.imageLabel.image =image;
+
     return cell;
 }
+
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    ChapViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ChapViewController"];
-    if (tableView == self.searchDisplayController.searchResultsTableView) {
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+     ChapterViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ChapterViewController"];
         controller.mangaID = [[searchResults objectAtIndex:indexPath.row] valueForKey:@"i"];
         controller.mangaName = [[searchResults objectAtIndex:indexPath.row] valueForKey:@"t"];
-    } else {
-        controller.mangaID = [[allMangasArray objectAtIndex:indexPath.row] valueForKey:@"i"];
-        controller.mangaName = [[allMangasArray objectAtIndex:indexPath.row] valueForKey:@"t"];
-    }
-    [self.navigationController pushViewController:controller animated:YES];
     
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 #pragma mark - SEARCH DISPLAY delegate
 
--(BOOL)searchDisplayController:(UISearchDisplayController *)controller
-shouldReloadTableForSearchString:(NSString *)searchString
-{
-    
-    [self filterContentForSearchText:searchString
-                               scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
-                                      objectAtIndex:[self.searchDisplayController.searchBar
-                                                     selectedScopeButtonIndex]]];
-    
-    return YES;
-}
+//-(BOOL)searchDisplayController:(UISearchDisplayController *)controller
+//shouldReloadTableForSearchString:(NSString *)searchString
+//{
+//    
+//    [self filterContentForSearchText:searchString
+//                               scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
+//                                      objectAtIndex:[self.searchDisplayController.searchBar
+//                                                     selectedScopeButtonIndex]]];
+//    
+//    return YES;
+//}
+//
+//
+//- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
+//{
+//    NSPredicate *resultPredicate = [NSPredicate
+//                                    predicateWithFormat:@"t contains[cd] %@",
+//                                    searchText];
+//    searchResults = [allMangasArray filteredArrayUsingPredicate:resultPredicate];
+//    
+//    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"t" ascending:YES];
+//    searchResults=[searchResults sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
+//}
 
 
-- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
-{
-    NSPredicate *resultPredicate = [NSPredicate
-                                    predicateWithFormat:@"t contains[cd] %@",
-                                    searchText];
-    searchResults = [allMangasArray filteredArrayUsingPredicate:resultPredicate];
-    
-    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"t" ascending:YES];
-    searchResults=[searchResults sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
-}
 @end
